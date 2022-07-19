@@ -57,9 +57,9 @@
 <form action="https://formsubmit.co/mahmoudccnn@gmail.com" method="POST">
   <h2>Your Details</h2>
 
-<input  class="half" type="text" placeholder="name">
-<input  class="half" type="email" placeholder="e-mail">
-<input  class="half" type="number" placeholder="watsapp">
+<input  class="half" id="name"  type="text" placeholder="name">
+<input  class="half"  id="email" type="email" placeholder="e-mail">
+<input  class="half" id="watsaap" type="number" placeholder="watsapp">
    <button type="submit">Send</button>
   <div class="cart-container">
     <h2>Cart</h2>
@@ -79,7 +79,7 @@
         <td><strong>Items</strong></td>
         <td><strong>Total</strong></td>
       </tr>
-      <tr>
+      <tr>               
         <td>x <span id="itemsquantity">0</span></td>
        
         <td>$<span id="total">0</span></td>
@@ -114,5 +114,30 @@
   <footer class="credit">Author: Jasmine Smalley - Distributed By: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer>
 
         <script  src="script.js"></script> 
+	  <script>
+		   
+ 
+		  
+		  
+		 
+    function sendEmail(){
+        Email.send({
+To :'mahmoudccnn@gmail.com',
+ 
+ Body:"name"+document.getElementById(" carttotals").Value +
+ " itemsquantity"+document.getElementById("  itemsquantity").value+
+ 
+ 
+ 
+ "  total "+document.getElementById("   total ").value+
+ "  name  "+document.getElementById(" name ").value+
+ "  email "+document.getElementById("   email ").value+
+ " watsaap  "+document.getElementById("  watsaap ").value 
+
+        });
+    }
+     
+		   
+	  </script>
   </body>
 </html>
